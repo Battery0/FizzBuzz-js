@@ -5,38 +5,62 @@ describe('Fizzbuzz', function() {
   });
 
   describe('knows when a number is', function() {
-    it('divisable by 3', function() {
-      expect(fizzbuzz.isDivisableByThree(3)).toBe(true); // 3 is Fizz, 5 is Buzz & divis by 3 &5 = FizzBuzz
+    it('divisible by 3', function() {
+      expect(fizzbuzz.isDivisibleByThree(3)).toBe(true); // 3 is Fizz, 5 is Buzz & divis by 3 &5 = FizzBuzz
     });
   });
 
   describe('knows when a number is NOT', function() {
-    it('divisable by 3', function() {
-      expect(fizzbuzz.isDivisableByThree(1)).toBe(false);
+    it('divisible by 3', function() {
+      expect(fizzbuzz.isDivisibleByThree(1)).toBe(false);
     });
   });
 
   describe('knows when a number is', () => {
-    it('divisable by 5', () => {
-     expect(fizzbuzz.isDivisableByFive(5)).toBe(true)
+    it('divisible by 5', () => {
+     expect(fizzbuzz.isDivisibleByFive(5)).toBe(true);
     });
   });
 
   describe('knows when a number is NOT', () => {
-    it('divisable by 5', () => {
-      expect(fizzbuzz.isDivisableByFive(1)).toBe(false)
+    it('divisible by 5', () => {
+      expect(fizzbuzz.isDivisibleByFive(1)).toBe(false);
     });
   });
 
   describe('knows when a number is', () => {
-    it('divisable by 15', () => {
-      expect(fizzbuzz.isDivisableByFifteen(15)).toBe(true)
+    it('divisible by 15', () => {
+      expect(fizzbuzz.isDivisibleByFifteen(15)).toBe(true);
     });
   });
 
   describe('knows when a numbers is NOT', () => {
-    it('divisable by 15', () => {
-      expect(fizzbuzz.isDivisableByFifteen(1)).toBe(false)
+    it('divisible by 15', () => {
+      expect(fizzbuzz.isDivisibleByFifteen(1)).toBe(false);
+    });
+  });
+
+  describe('when playing a game', () => {
+    it('"Fizz" when a number is divisible by 3', () => {
+      expect(fizzbuzz.says(3)).toEqual("Fizz");
+    });
+  });
+
+  describe('when playing a game', () => {
+    it('"Buzz" when a number is divisible by 3', () => {
+      expect(fizzbuzz.says(5)).toEqual("Buzz");
+    });
+  });
+
+  describe('when playing a game', () => {
+    it('"Buzz" when a number is divisible by 15', () => {
+      expect(fizzbuzz.says(15)).toEqual("FizzBuzz");
+    });
+  });
+
+  describe('when playing a game', () => {
+    it('"Buzz" when a number is divisible by 15', () => {
+      expect(fizzbuzz.says(1)).toEqual(1);
     });
   });
 
